@@ -15,18 +15,5 @@
 			<% end_if %>
 		</div>
 	</div>
-	<div class="usedWidgetsHolder">
-		<h2><% _t('INUSE', 'Widgets currently used') %></h2>
-		<p><% _t('TOSORT', 'To sort currently used widgets on this page, drag them up and down.') %></p>
-		
-		<div class="usedWidgets" id="usedWidgets-$Name">
-			<% if UsedWidgets %>
-				<% control UsedWidgets %>
-					$EditableSegment
-				<% end_control %>
-			<% else %>
-				<div class="NoWidgets" id="NoWidgets-$Name"></div>
-			<% end_if %>
-		</div>
-	</div>
+	
 </div>

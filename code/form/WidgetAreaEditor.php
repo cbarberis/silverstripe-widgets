@@ -39,7 +39,12 @@ class WidgetAreaEditor extends FormField {
 				$widgets->push(singleton($class));
 			}
 		}
-		
+		if($this->UsedWidgets()) foreach($this->UsedWidgets() as $w) {
+			if($wt = $widgets->find('ClassName',$w->ClassName) && $w->Enabled) {
+				$wt = $widgets->find('ClassName',$w->ClassName);
+				$wt->Enabled = 1;
+			} 
+		}
 		return $widgets;
 	}
 	
